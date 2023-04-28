@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.text-edge-outline {
+		-webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+	}
+	::selection {
+		text-stroke: 1px black;
+		-webkit-text-stroke: 1px black;
+		color: black;
+		background: rgba(255, 255, 255, 0.3);
+	}
+
+	::-moz-selection {
+		text-stroke: 1px black;
+		-webkit-text-stroke: 1px black;
+		color: black;
+		background: rgba(255, 255, 255, 0.3);
+	}
+}
