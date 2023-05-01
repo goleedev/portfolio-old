@@ -1,24 +1,24 @@
-import "../global.css";
-import { Inter } from "@next/font/google";
-import LocalFont from "@next/font/local";
-import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
+import "../global.css"
+import { Inter } from "@next/font/google"
+import LocalFont from "@next/font/local"
+import { Metadata } from "next"
+import { Analytics } from "./components/analytics"
 
 export const metadata: Metadata = {
 	title: {
-		default: "chronark.com",
-		template: "%s | chronark.com",
+		default: "goleedev",
+		template: "%s | goleedev",
 	},
-	description: "Software engineer at upstash.com and founder of planetfall.io",
+	description:
+		"Front-end developer building quality components and performant web apps",
 	openGraph: {
-		title: "chronark.com",
-		description:
-			"Software engineer at upstash.com and founder of planetfall.io",
-		url: "https://chronark.com",
-		siteName: "chronark.com",
+		title: "goleedev",
+		description: "building quality components and performant web apps",
+		url: "https://goleedev.vercel.app/",
+		siteName: "goleedev.vercel.app/",
 		images: [
 			{
-				url: "https://chronark.com/og.png",
+				url: "https://goleedev.vercel.app/og.png",
 				width: 1920,
 				height: 1080,
 			},
@@ -38,27 +38,27 @@ export const metadata: Metadata = {
 		},
 	},
 	twitter: {
-		title: "Chronark",
+		title: "goleedev",
 		card: "summary_large_image",
 	},
 	icons: {
 		shortcut: "/favicon.png",
 	},
-};
+}
 const inter = Inter({
 	subsets: ["latin"],
 	variable: "--font-inter",
-});
+})
 
 const calSans = LocalFont({
 	src: "../public/fonts/CalSans-SemiBold.ttf",
 	variable: "--font-calsans",
-});
+})
 
 export default function RootLayout({
 	children,
 }: {
-	children: React.ReactNode;
+	children: React.ReactNode
 }) {
 	return (
 		<html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
@@ -71,5 +71,5 @@ export default function RootLayout({
 				{children}
 			</body>
 		</html>
-	);
+	)
 }
